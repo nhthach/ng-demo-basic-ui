@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="container">
+        <form class="sign-in" #formLoginIn="ngForm">
+              
+              <label for="uname" id="txt_username">Usernam: <span>{{loginModel.email}}</span></label>
+              <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="loginModel.email">
+          
+              <label for="psw" id="txt_password">Password: <span>{{loginModel.password}}</span></label>
+              <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="loginModel.password">
+          
+              <button (click)="onClick(formLoginIn)">Login</button>
+          
+        </form>    
+    </div>  
+  </div>
+  
+</div>

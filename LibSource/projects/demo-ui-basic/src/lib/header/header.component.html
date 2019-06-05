@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-toolbar color="primary" class='navbar-expand-sm navbar-dark bg-dark static-top crm-navigation-bar mat-toolbar mat-primary mat-toolbar-multiple-rows'>
+  <mat-toolbar-row class=''>
+    <button mat-icon-button >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img src="{{logoUrl}}" alt="Logo">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto nav navbar-right">
+      	<button mat-button *ngFor="let menu of menuItems"  >{{menu.name}}</button>
+      	<button mat-button [matMenuTriggerFor]="menu">
+          <img src="{{userInfo.avartar}}" class="img-rounded avartar" alt="User Profile">
+      	</button>
+		<mat-menu #menu="matMenu">
+		  <button mat-menu-item>{{userInfo.name}}</button>
+		  <button mat-menu-item>Sign out</button>
+		</mat-menu>
+		<button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+         </button>
+      </ul>
+    </div>
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
